@@ -15,5 +15,4 @@ Also this application has a function called calculateFunction to get an accurate
 
 ![1](https://github.com/Shrouk-Ashraf/calculator-app/assets/68174886/0cb09acd-a39a-467b-a853-d1bdc7752934)
 
-
 ![2](https://github.com/Shrouk-Ashraf/calculator-app/assets/68174886/e54f7f29-d717-4d52-ad4a-4b71c6b872ff)
