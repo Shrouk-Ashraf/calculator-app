@@ -61,7 +61,10 @@ class _CalculatorAppState extends State<CalculatorApp> {
                               children: [
                                 FloatingActionButton(
                                   backgroundColor: Colors.blue,
-                                  child: Text(list[row]['list'][column].toString()),
+                                  child: Text(list[row]['list'][column].toString(),
+                                        style: TextStyle(
+                                          fontSize: 20
+                                        ),),
                                   onPressed: () {
                                     setState(() {
                                       switch(list[row]['list'][column]){
