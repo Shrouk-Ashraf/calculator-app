@@ -1,26 +1,61 @@
 
 int calculateFunction(List equation, List operators){
-  int result =0;
-  int index;
+  int result;
   if(equation[0]=='+'||equation[0]=='-'||equation[0]=='*'||equation[0]=='/'||equation[0]=='' ){
-    return -1;
+    return null;
   }
-  if(operators.contains('*') ){
-    index = equation.indexOf('*');
-    equation[index -1] = (int.parse(equation[index -1]) * int.parse(equation[index+1])).toString();
+
+  while(operators.length >0){
+    if(operators.contains('*') ){
+      equation = executeHigherOrderOperation('*', equation,result);
+      operators.remove('*');
+    }
+    else if(operators.contains('/') ){
+      equation = executeHigherOrderOperation('/', equation,result);
+      operators.remove('/');
+    }
+    else if(operators.contains('+')){
+      equation = executeLowerOrderOperation('+',equation,result);
+      operators.remove('+');
+    }
+    else if(operators.contains('-')){
+      equation = executeLowerOrderOperation('-',equation,result);
+      operators.remove('-');
+    }
   }
-  if(operators.contains('/') ){
-    index = equation.indexOf('/');
-    equation[index -1] = (int.parse(equation[index -1]) ~/ int.parse(equation[index+1])).toString();
+
+  if(equation.length ==1){
+    result = int.parse(equation[0]);
   }
-  if(operators.contains('+') ){
-    index = equation.indexOf('+');
-    equation[index -1] = (int.parse(equation[index -1]) + int.parse(equation[index+1])).toString();
-  }
-  if(operators.contains('-') ){
-    index = equation.indexOf('-');
-    equation[index -1] = (int.parse(equation[index -1]) - int.parse(equation[index+1])).toString();
-  }
-  result = int.parse(equation [index -1]);
   return result;
+}
+
+List executeHigherOrderOperation(String operator,List equation,int result){
+  int indexOfOperator = equation.indexOf(operator);
+  switch(operator){
+    case '*':
+      result = int.parse(equation[indexOfOperator-1]) * int.parse(equation[indexOfOperator+1]);
+      break;
+    case '/':
+      result = int.parse(equation[indexOfOperator-1]) ~/ int.parse(equation[indexOfOperator+1]);
+      break;
+  }
+  equation.removeRange(indexOfOperator, indexOfOperator+2);
+  equation[indexOfOperator-1] = result.toString();
+  return equation;
+}
+
+List executeLowerOrderOperation(String operator,List equation,int result){
+  int indexOfOperator = equation.indexOf(operator);
+  switch(operator){
+    case '+':
+      result = int.parse(equation[indexOfOperator-1]) + int.parse(equation[indexOfOperator+1]);
+      break;
+    case '-':
+      result = int.parse(equation[indexOfOperator-1]) - int.parse(equation[indexOfOperator+1]);
+      break;
+  }
+  equation.removeRange(indexOfOperator, indexOfOperator+2);
+  equation[indexOfOperator-1] = result.toString();
+  return equation;
 }

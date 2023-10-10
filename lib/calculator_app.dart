@@ -89,9 +89,11 @@ class _CalculatorAppState extends State<CalculatorApp> {
                                           break;
                                         case '=':
                                           List equation = s.split(" ");
+                                          print (equation);
                                           int result =calculateFunction(equation,operators);
-                                          if(result != -1)
+                                          if(result != null)
                                             s = result.toString();
+                                          operators.clear();
                                           break;
                                         default:
                                           s += list[row]['list'][column].toString();
