@@ -1,6 +1,11 @@
 {
+<<<<<<< HEAD
     "name": "calculator_app_flutter",
     "short_name": "calculator_app_flutter",
+=======
+    "name": "calculator_app",
+    "short_name": "calculator_app",
+>>>>>>> ba6483b2f459633f488ad2a1e7f2e7aaf3eadcab
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
@@ -18,6 +23,7 @@
             "src": "icons/Icon-512.png",
             "sizes": "512x512",
             "type": "image/png"
+<<<<<<< HEAD
         },
         {
             "src": "icons/Icon-maskable-192.png",
@@ -30,6 +36,8 @@
             "sizes": "512x512",
             "type": "image/png",
             "purpose": "maskable"
+=======
+>>>>>>> ba6483b2f459633f488ad2a1e7f2e7aaf3eadcab
         }
     ]
 }

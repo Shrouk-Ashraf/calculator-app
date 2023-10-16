@@ -1,16 +1,18 @@
-# calculator_app_flutter
+# calculator_app
 
-A new Flutter project.
+A calculator application using flutter.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This application contains of some of Widgets as:
+1- AppBar
+2- Column and Row.
+3- Container.
+4- SizedBox.
+5- FloatingActionButton.
 
-A few resources to get you started if this is your first Flutter project:
+Also this application has a function called calculateFunction to get an accurate result by executing the operations in order.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+![1](https://github.com/Shrouk-Ashraf/calculator-app/assets/68174886/0cb09acd-a39a-467b-a853-d1bdc7752934)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![2](https://github.com/Shrouk-Ashraf/calculator-app/assets/68174886/e54f7f29-d717-4d52-ad4a-4b71c6b872ff)
